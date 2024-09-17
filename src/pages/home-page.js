@@ -1,10 +1,13 @@
 //Home Page
 import React from 'react';
+import HeroSection from '../components/hero-section';
+import Skills from '../components/skills';
+
 const HomePage = () => {
   return (
     <div>
-      <h1>Welcome to the Home Page</h1>
-      <p>This is the home page content.</p>
+      <HeroSection />
+      <Skills />
     </div>
   );
 };

@@ -35,37 +35,5 @@ module.exports = {
     },
   },
   plugins: [
-    plugin(function({ addComponents }) {
-      addComponents({
-
-        // Header Components
-        '.header': {
-          '@apply flex flex-col md:flex-row justify-between items-center py-4 px-8 bg-primary-dark text-neutral-light': {},
-        },
-        '.header-container': {
-          '@apply flex items-center justify-between w-full': {},
-        },
-        '.logo': {
-          '@apply text-accent-light text-2xl hover:text-accent-dark transition duration-300': {},
-        },
-        '.menu-toggle-button': {
-          '@apply md:hidden focus:outline-none text-neutral-light hover:text-accent-light transition duration-300': {},
-        },
-        '.main-nav': {
-          '@apply flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 mt-4 md:mt-0': {},
-        },
-        '.nav-link-container': {
-          '@apply w-full md:w-auto': {},
-        },
-        '.nav-link': {
-          '@apply py-2 text-neutral-light hover:text-accent-light md:hover:border-b-2 hover:border-accent-light transition duration-300 flex items-center justify-center md:justify-start w-full': {},
-        },
-        '.main-nav-icon': {
-          '@apply mr-2 md:hidden text-accent-light': {},
-        }
-
-        
-      })
-    }),
   ],
 }
