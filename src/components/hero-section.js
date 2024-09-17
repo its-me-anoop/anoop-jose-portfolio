@@ -1,3 +1,13 @@
+/**
+ * The `HeroSection` component represents the hero section of the website, which includes the user's profile information, a call-to-action, and social media links.
+ *
+ * This component is responsible for rendering the hero section of the website, which is typically the first section users see when they visit the site. It includes the user's name, job title, a brief description, buttons to view the user's work and download their CV, and links to the user's GitHub and LinkedIn profiles.
+ *
+ * The component uses several sub-components and external libraries, such as `react-icons` for the social media icons. It also imports an image of the user, which is displayed in the hero section.
+ *
+ * @returns {JSX.Element} The rendered `HeroSection` component.
+ */
+
 import React from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import AnoopJoseImage from '../images/anoop-jose.png';

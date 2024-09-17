@@ -1,22 +1,30 @@
+/**
+ * Renders a section displaying the user's skills, organized into categories.
+ *
+ * The `Skills` component maps over an array of skill categories, each containing a title and a list of skills.
+ * For each category, it renders a heading and a list of skill chips.
+ *
+ * @returns {JSX.Element} The rendered skills section.
+ */
 import React from 'react';
 
 const Skills = () => {
   const skillCategories = [
     {
       title: 'Programming Languages',
-      skills: ['JavaScript', 'Dart', 'Swift', 'SQL', 'Python', 'Java', 'C++', 'C#'],
+      skills: ['JavaScript', 'Dart', 'Swift', 'SQL', 'Python'],
     },
     {
       title: 'Frameworks',
-      skills: ['React JS', 'Angular', 'Vue', 'React Native', 'Flutter', 'SwiftUI'],
+      skills: ['React JS', 'React Native', 'Flutter', 'SwiftUI'],
     },
     {
       title: 'Development Tools',
-      skills: ['Git', 'GitHub', 'JSON', 'API Integration', 'CI/CD', 'Agile Methodologies'],
+      skills: ['Git', 'GitHub', 'JSON', 'API Integration'],
     },
     {
       title: 'Web Development',
-      skills: ['WordPress', 'Webflow', 'HTML', 'CSS', 'Node.js', 'Express.js', 'MongoDB'],
+      skills: ['WordPress', 'Webflow', 'HTML', 'CSS', 'Node.js'],
     },
     {
       title: 'Mobile Development',
@@ -29,19 +37,19 @@ const Skills = () => {
   ];
 
   return (
-    <section className="skills-section">
-      <h2 className="section-title">Skills</h2>
+    <section className="skills-section" aria-labelledby="skills-heading">
+      <h2 id="skills-heading" className="section-title">Skills</h2>
       <div className="skills-container">
         {skillCategories.map((category, index) => (
           <div key={index} className="skill-category">
-            <h3 className="category-title">{category.title}</h3>
-            <div className="skill-chips">
+            <h3 id={`category-${index}`} className="category-title">{category.title}</h3>
+            <ul className="skill-chips" aria-labelledby={`category-${index}`}>
               {category.skills.map((skill, skillIndex) => (
-                <span key={skillIndex} className="skill-chip">
-                  {skill}
-                </span>
+                <li key={skillIndex} className="skill-item">
+                  <span className="skill-chip">{skill}</span>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         ))}
       </div>
