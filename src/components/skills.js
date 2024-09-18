@@ -38,7 +38,7 @@ const Skills = () => {
 
   return (
     <section className="skills-section" aria-labelledby="skills-heading">
-      <h2 id="skills-heading" className="section-title">Skills</h2>
+      <h2 id="skills-heading" className="skills-section-title">Skills</h2>
       <div className="skills-container">
         {skillCategories.map((category, index) => (
           <div key={index} className="skill-category">

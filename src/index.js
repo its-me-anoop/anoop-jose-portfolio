@@ -5,6 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import HomePage from './pages/home-page';
 import Header from './components/header';
+import ProjectsPage from './pages/projects-page';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -14,6 +15,7 @@ root.render(
     <Header />
       <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
