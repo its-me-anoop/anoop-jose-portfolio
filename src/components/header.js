@@ -2,7 +2,7 @@
 
 // Imports
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { FaBars, FaUser, FaProjectDiagram, FaEnvelope, FaTimes } from 'react-icons/fa';
 
 // Header Component
@@ -10,6 +10,7 @@ const Header = () => {
 
     /// State
     const [isOpen, setIsOpen] = useState(false);
+    const location = useLocation();
 
     // Menu Items
     const menuItems = [
@@ -30,7 +31,10 @@ const Header = () => {
         <ul className='main-nav'>
           {menuItems.map((item, index) => (
             <li key={index} className="nav-link-container">
-              <Link to={item.to} className="nav-link">
+              <Link 
+                to={item.to} 
+                className={`nav-link ${location.pathname === item.to ? 'active' : ''}`}
+              >
                 <span className="main-nav-icon">{item.icon}</span>
                 <span>{item.label}</span>
               </Link>

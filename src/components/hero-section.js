@@ -10,7 +10,9 @@
 
 import React from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import AnoopJoseImage from '../images/anoop-jose.png';
+import CV from '../assets/cv.pdf';
 
 const HeroSection = () => {
   return (
@@ -23,8 +25,8 @@ const HeroSection = () => {
           With a background in Nano Science and Technology, I bring a unique perspective to software development.
         </p>
         <div className="cta-buttons">
-          <button className="primary-btn">View My Work</button>
-          <button className="secondary-btn">Download CV</button>
+          <Link to="/projects" className="primary-btn">View My Work</Link>
+          <a href={CV} download className="secondary-btn">Download CV</a>
         </div>
         <div className="social-links">
           <a href="https://github.com/its-me-anoop" target="_blank" rel="noopener noreferrer">
